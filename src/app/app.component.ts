@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Assignment4';
+ title= "reed";
+ oddNumbers: number[]= [];
+ evenNumbers: number[]= [];
+
+ onIntervalFired(firedNumber: number){
+  if(firedNumber % 2 == 0){
+    this.evenNumbers.push(firedNumber);
+  }
+  else{
+    this.oddNumbers.push(firedNumber);
+  }
+ }
 }
+  
